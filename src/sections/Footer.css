@@ -1,0 +1,28 @@
+.footer {
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-logo {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.footer-copy {
+  flex: 1;
+  font-size: 13px;
+  color: var(--text-3);
+  text-align: center;
+}
+
+.footer-studio {
+  font-size: 12px;
+  color: var(--text-3);
+}

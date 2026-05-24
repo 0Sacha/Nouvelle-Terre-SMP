@@ -1,0 +1,89 @@
+.download {
+  padding: 100px 0;
+}
+
+.download-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.download-header .section-sub { margin: 12px auto 0; }
+
+.download-card {
+  max-width: 400px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.download-os-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(34,197,94,0.08);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--accent);
+}
+
+.download-os-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+.download-os-meta {
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+.download-btn {
+  margin-top: 8px;
+  width: 100%;
+  justify-content: center;
+  border-radius: var(--radius);
+}
+
+.download-requirements {
+  max-width: 400px;
+  margin: 28px auto 0;
+}
+
+.requirements-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.requirements-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.requirements-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+.requirements-check {
+  color: var(--accent);
+  font-size: 12px;
+  flex-shrink: 0;
+}
