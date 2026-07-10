@@ -1,0 +1,455 @@
+.relay {
+  min-height: 100vh;
+  padding: 56px 0 80px;
+}
+
+.relay-inner {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+}
+
+.relay-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-2);
+  margin-bottom: 32px;
+  width: fit-content;
+  transition: color 0.15s;
+}
+.relay-back:hover { color: var(--text-1); }
+
+.relay-header {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.relay-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.relay-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--accent);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.relay-title {
+  font-size: clamp(28px, 4.5vw, 42px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-1);
+}
+
+.relay-sub {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-2);
+  max-width: 56ch;
+}
+
+.relay-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+}
+
+.relay-file-input { display: none; }
+
+.dropzone {
+  border: 2px dashed var(--border);
+  background: transparent;
+  border-radius: var(--radius);
+  padding: 52px 28px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.dropzone:hover,
+.dropzone--drag {
+  border-color: var(--accent);
+  background: rgba(34, 197, 94, 0.06);
+}
+
+.dropzone-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 18px;
+  border-radius: var(--radius);
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--accent);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropzone-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-1);
+  margin-bottom: 6px;
+}
+
+.dropzone-sub {
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+.dropzone-meta {
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-3);
+}
+
+.relay-preview {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  max-height: 340px;
+}
+.relay-preview img,
+.relay-preview video {
+  max-width: 100%;
+  max-height: 340px;
+  display: block;
+  object-fit: contain;
+}
+
+.relay-file-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.relay-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.relay-badge--sm { padding: 4px 7px; }
+
+.relay-file-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.relay-file-size {
+  font-size: 13px;
+  color: var(--text-2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.relay-progress { margin-top: 20px; }
+
+.relay-progress-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.relay-progress-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.relay-progress-pct {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.relay-progress-track {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.relay-progress-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.15s;
+}
+
+.relay-done { margin-top: 20px; }
+
+.relay-done-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.relay-url-row {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.relay-url-input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 0 14px;
+  font: 500 14px/1 ui-monospace, 'SF Mono', Menlo, monospace;
+  color: var(--text-1);
+  background: var(--bg-card2);
+  height: 44px;
+}
+
+.relay-copy-btn {
+  flex-shrink: 0;
+  height: 44px;
+  padding: 0 20px;
+  white-space: nowrap;
+}
+
+.relay-done-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.relay-link-btn {
+  border: none;
+  background: transparent;
+  border-radius: 9px;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+  cursor: pointer;
+}
+.relay-link-btn:hover { color: var(--text-1); }
+
+.relay-error {
+  margin-top: 14px;
+  padding: 11px 14px;
+  border-radius: 9px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #f87171;
+  font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.relay-history { margin-top: 40px; }
+
+.relay-history-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.relay-history-head h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-1);
+}
+.relay-history-head span {
+  font-size: 12.5px;
+  color: var(--text-3);
+}
+
+.relay-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.relay-history-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  padding: 11px 12px;
+}
+
+.relay-history-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.relay-history-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.relay-history-url {
+  font-size: 12px;
+  color: var(--text-3);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: ui-monospace, Menlo, monospace;
+}
+
+.relay-history-date {
+  font-size: 12px;
+  color: var(--text-3);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.relay-icon-btn {
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  background: transparent;
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-2);
+  transition: background 0.15s, color 0.15s;
+}
+.relay-icon-btn:hover { background: rgba(255, 255, 255, 0.06); color: var(--text-1); }
+.relay-icon-btn--danger:hover { color: #f87171; }
+
+.relay-footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  color: var(--text-3);
+}
+
+.relay-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 200;
+}
+
+.relay-modal {
+  width: 100%;
+  max-width: 460px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6);
+}
+
+.relay-modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.relay-modal-head h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+.relay-modal-intro {
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+.relay-modal-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.relay-modal-steps li {
+  display: flex;
+  gap: 14px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--text-1);
+}
+
+.relay-step-num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #052e16;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.relay-modal-close {
+  margin-top: 24px;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 560px) {
+  .relay-file-row { flex-wrap: wrap; }
+  .relay-url-row { flex-direction: column; }
+  .relay-copy-btn { justify-content: center; }
+}

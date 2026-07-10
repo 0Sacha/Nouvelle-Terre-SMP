@@ -1,0 +1,4 @@
+# Les médias servis via /m/* sont mis en cache agressivement (liens permanents)
+/m/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=31536000, immutable

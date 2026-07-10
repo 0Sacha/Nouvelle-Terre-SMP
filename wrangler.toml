@@ -1,0 +1,9 @@
+name = "nouvelle-terre-website"
+pages_build_output_dir = "dist"
+compatibility_date = "2024-11-01"
+
+# Binding R2 utilisé par les fonctions (functions/api/upload.js et functions/m/[[key]].js).
+# Crée d'abord le bucket : `npx wrangler r2 bucket create nouvelle-terre-media`
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "nouvelle-terre-media"
